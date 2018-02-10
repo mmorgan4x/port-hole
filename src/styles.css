@@ -1,55 +1,54 @@
-﻿
-/*------------------------Default CSS------------------------*/
+﻿/*------------------------Default CSS------------------------*/
 
 body {
     padding-top: 0;
     overflow: hidden;
-    margin:0;
-     text-align:center
+    margin: 0;
+    text-align: center
 }
 
 input[type=range] {
     -webkit-appearance: none;
 }
 
-    input[type=range]::-webkit-slider-runnable-track {
-        width: 300px;
-        height: 3px;
-        background: #ccc;
-        border: none;
-        border-radius: 1px;
-    }
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 3px;
+    background: #ccc;
+    border: none;
+    border-radius: 1px;
+}
 
-    input[type=range]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        border: none;
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        background: #808080;
-        margin-top: -6px;
-    }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #808080;
+    margin-top: -6px;
+}
 
-    input[type=range]:focus {
-        outline: none;
-    }
+input[type=range]:focus {
+    outline: none;
+}
 
-        input[type=range]:focus::-webkit-slider-runnable-track {
-            background: #ccc;
-        }
-
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
 
 .row.no-pad {
     margin-right: 0;
     margin-left: 0;
 }
 
-    .row.no-pad > [class*='col-'] {
-        padding-right: 0;
-        padding-left: 0;
-    }
+.row.no-pad>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
 
-form, .navbar-form {
+form,
+.navbar-form {
     padding: 0 !important;
 }
 
@@ -57,7 +56,6 @@ form, .navbar-form {
     border-top-color: #999 !important;
     border-bottom-color: #999 !important;
 }
-
 
 /*----------------------Porthole CSS------------------------*/
 
@@ -89,7 +87,6 @@ form, .navbar-form {
     pointer-events: none;
 }
 
-
 /*------------------------Watermark Logo------------------------*/
 
 #logo {
@@ -119,9 +116,9 @@ form, .navbar-form {
     transition: transform 1s ease;
 }
 
-    .watermark:hover {
-        opacity: 1;
-    }
+.watermark:hover {
+    opacity: 1;
+}
 
 .logo-Hidden {
     transform: rotate(720deg);
@@ -130,7 +127,6 @@ form, .navbar-form {
 .red {
     color: #D9534F !important;
 }
-
 
 /*------------------------Toolbar------------------------*/
 
@@ -145,9 +141,9 @@ form, .navbar-form {
     transition: transform .8s ease;
 }
 
-    #leftArrow:hover {
-        color: white !important;
-    }
+#leftArrow:hover {
+    color: white !important;
+}
 
 #brand {
     font-size: 20px;
@@ -159,10 +155,9 @@ form, .navbar-form {
     padding-left: 50px;
 }
 
-    #brand:hover {
-        color: #fff;
-    }
-
+#brand:hover {
+    color: #fff;
+}
 
 /*------------------------Notifications------------------------*/
 
@@ -180,26 +175,26 @@ form, .navbar-form {
     transition: background-color .3s;
 }
 
-    .tabbed:hover {
-        background-color: #969494;
-        transition: background-color .3s;
-    }
+.tabbed:hover {
+    background-color: #969494;
+    transition: background-color .3s;
+}
 
-    .tabbed:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: rgba(255,255,255,0.4);
-    }
+.tabbed:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
-    .tabbed:hover:after {
-        width: 120%;
-        background-color: rgba(255,255,255,0);
-        transition: all 0.3s ease-out;
-    }
+.tabbed:hover:after {
+    width: 120%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-out;
+}
 
 #locked-noti {
     left: 50px;
@@ -208,7 +203,6 @@ form, .navbar-form {
 #hidden-noti {
     left: 150px;
 }
-
 
 /*------------------------URLs------------------------*/
 
@@ -225,7 +219,6 @@ form, .navbar-form {
     border-radius: 4px 0 0 4px !important;
 }
 
-
 /*------------------------Info Section------------------------*/
 
 .info-container {
@@ -241,14 +234,14 @@ form, .navbar-form {
     height: 38px;
 }
 
-    .info-item:nth-child(even) {
-        background: #fcfcfc;
-    }
+.info-item:nth-child(even) {
+    background: #fcfcfc;
+}
 
-    .info-item:hover {
-        border-top: 1px solid #ededed;
-        border-bottom: 1px solid #ededed;
-    }
+.info-item:hover {
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
 
 .key {
     margin: 1px 0;
@@ -270,7 +263,7 @@ form, .navbar-form {
     font-size: 13px;
     line-height: .75;
     background: #f5f3f1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
 }
 
@@ -295,7 +288,6 @@ form, .navbar-form {
     font-size: 22px;
     font-family: Roboto, sans-serif;
 }
-
 
 /*------------------------Options------------------------*/
 

@@ -1,1 +1,183 @@
-hello
+<html lang="en">
+
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Port Hole</title>
+    </head>
+
+    <body>
+
+        <!-- frames -->
+        <iframe id="Main-Frame" class="non-interactive" frameborder="0" src="http://google.com"></iframe>
+
+        <div id="lens" class="lensEffect">
+            <iframe id="Hidden-Frame" class="non-interactive" frameborder="0" src="http://youtube.com"></iframe>
+        </div>
+
+        <!-- nav-bar -->
+        <nav id="footer" class="bg-dark fixed-bottom">
+            <div class="row">
+
+                <div class="col-2">
+                    <a id="brand" href="http://google.com" target="_blank">
+                        <span style="font-weight:400">PORT</span>HOLE<i class="fa fa-circle-o-notch"></i>
+                    </a>
+                </div>
+
+                <div id="leftArrow" title="Minimize Toolbar">
+                    <i class="fa fa-chevron-circle-left"></i>
+                </div>
+                <div id="locked-noti" class="tabbed" title="The Porthole is Locked, click to unlock.">
+                    <i class="fa fa-lock"></i> LOCKED
+                </div>
+                <div id="hidden-noti" class="tabbed" title="The Porthole is Hidden, click to show.">
+                    <i class="fa fa-ban"></i> HIDDEN
+                </div>
+
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend" id="basic-addon1">
+                                    <button id="Main-label" class="btn btn-light" title="Click to toggle mouse interactivity on the Main page." type="button">Main <i class="fa fa-hand-o-up"></i></button>
+                                </div>
+                                <input id="MainURL" value="http://google.com" type="text" autocomplete="on" class="form-control" placeholder="Main URL">
+                                <div class="input-group-append" id="basic-addon1">
+                                    <button id="Main-refresh" class="btn btn-light" title="Go!" type="button"><i class="fa fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button id="swap" class="btn btn-light btn-lg" title="Click to swap the Main and Hidden pages." type="button"><i class="fa fa-retweet"></i></button>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend" id="basic-addon1">
+                                    <button id="Hidden-label" class="btn btn-light" title="Click to toggle mouse interactivity on the Hidden page." type="button">Hidden <i class="fa fa-hand-o-up"></i></button>
+                                </div>
+                                <input id="HiddenURL" value="http://youtube.com" type="text" autocomplete="on" class="form-control" placeholder="Hidden URL">
+                                <div class="input-group-append" id="basic-addon1">
+                                    <button id="Hidden-refresh" class="btn btn-light" title="Go!" type="button"><i class="fa fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="links">
+                        <div title="Feedback" class="btn btn-light"><a href="mailto:Matt.Morgan@onbase.com?Subject=Porthole Feedback"><i class="fa fa-reply-all"></i></a></div>
+
+                        <div class="btn-group" title="Info">
+                            <a id="info" href="#" style="cursor:help" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question"></i></a>
+                            <ul class="info-container dropdown-menu">
+                                <li class="info-item">
+                                    <div class="key">
+                                        <div class="keycap"><br />Ctrl</div>
+                                    </div> +
+                                    <div class="key">
+                                        <div class="keycap"><br /><i class="fa fa-long-arrow-left"></i></div>
+                                    </div>
+                                    <div class="key">
+                                        <div class="keycap"><br /><i class="fa fa-long-arrow-down"></i></div>
+                                    </div>
+                                    <div class="key">
+                                        <div class="keycap"><br /><i class="fa fa-long-arrow-up"></i></div>
+                                    </div>
+                                    <div class="key">
+                                        <div class="keycap"><br /><i class="fa fa-long-arrow-right"></i></div>
+                                    </div>
+                                    <span class="f-right">Resize Porthole</span>
+                                </li>
+                                <li class="info-item">
+                                    <span class="scroll-option"> <i class="fa fa-arrows-v"></i> (Scroll Wheel)</span>
+                                    <span class="f-right">Resize Porthole</span>
+                                </li>
+                                <li class="info-item">
+                                    <div class="key">
+                                        <div class="keycap"><br />Ctrl</div>
+                                    </div> +
+                                    <div class="key">
+                                        <div class="keycap"><br />Shift </div>
+                                    </div>
+                                    <span class="f-right">Lock Porthole</span>
+                                </li>
+                                <li class="info-item">
+                                    <div class="key">
+                                        <div class="keycap"><br />Ctrl</div>
+                                    </div> +
+                                    <div class="key">
+                                        <div class="keycap"><br />Alt</div>
+                                    </div>
+                                    <span class="f-right">Hide Porthole</span>
+                                </li>
+                                <li class="info-item">
+                                    <div class="key">
+                                        <div class="keycap"><br />Ctrl</div>
+                                    </div> +
+                                    <div class="key">
+                                        <div class="keycap"><br />Enter </div>
+                                    </div>
+                                    <span class="f-right">Refresh both pages</span>
+                                </li>
+                                <li class="info-item">
+                                    <span class="fake-btn"><i class="fa fa-retweet"></i></span>
+                                    <span class="f-right">Swap and refresh both pages</span>
+                                </li>
+                                <li class="info-item">
+                                    <span id="Hidden-label" class="fake-btn">Main <i class="fa fa-hand-o-up"></i></span> /
+                                    <span id="Hidden-label" class="fake-btn">Hidden <i class="fa fa-hand-o-up"></i></span>
+                                    <span class="f-right">Toggle mouse interactivity</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="options-data" class="btn" style="display:none" data-autohideon="true" data-showborderon="true" data-squarecornerson="true"></div>
+
+                        <div id="options-container" class="btn-group" title="Show options">
+                            <a id="options" href="#" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Options <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="autoHide" href="#"><i class="fa fa-dot-circle-o"></i> Auto-Hide</a></li>
+                                <li><a id="dontAutoHide" href="#"><i class="fa fa-ban"></i> Don't Auto-Hide</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a id="showBorders" href="#"><i class="fa fa-eye"></i> Show Border</a></li>
+                                <li><a id="hideBorders" href="#"><i class="fa fa-eye-slash"></i> Hide Border</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a id="squareCorners" href="#"><i class="fa fa-square-o"></i> Square Corners</a></li>
+                                <li><a id="roundCorners" href="#"><i class="fa fa-circle-thin"></i> Round Corners</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="fullScreen-container" class="btn btn-light" title="Fullscreen"><a id="fullScreen" href="#"><i class="fa fa-arrows-alt"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- watermark -->
+        <div id="logo" class="watermark" title="Maximize Toolbar">
+            <i class="fa fa-circle-o-notch"></i>
+        </div>
+
+        <div id="logo-noti" class="watermark" title="Click to Show and Unlock the Porthole">
+            <i class="fa fa-circle"></i>
+        </div>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="mousewheel-3.0.6.js"></script>
+
+</html>
