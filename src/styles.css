@@ -133,7 +133,7 @@ form,
 #leftArrow {
     cursor: pointer;
     position: absolute;
-    bottom: 3px;
+    bottom: 8px;
     left: 27px;
     padding: 7px;
     color: #999;
@@ -153,6 +153,8 @@ form,
     color: #999;
     text-decoration: none;
     padding-left: 50px;
+    padding: 4px 0;
+    display: block;
 }
 
 #brand:hover {
@@ -293,4 +295,20 @@ form,
 
 .selected-Option {
     background-color: #f5f5f5;
+}
+
+#footer {
+    padding: .5rem;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links .btn {
+    background: red;
+    border-radius: 0;
+    height: 54px;
+    line-height: 54px;
 }
