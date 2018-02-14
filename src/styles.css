@@ -7,6 +7,11 @@ body {
     text-align: center
 }
 
+.btn {
+    outline: none !important;
+    box-shadow: none;
+}
+
 input[type=range] {
     -webkit-appearance: none;
 }
@@ -91,8 +96,8 @@ form,
 
 #logo {
     cursor: pointer;
-    bottom: 0;
-    left: 25px;
+    bottom: 9px;
+    left: 13px;
     color: #999;
     font-size: 36px;
     text-shadow: 0 0 2px #000000;
@@ -133,8 +138,8 @@ form,
 #leftArrow {
     cursor: pointer;
     position: absolute;
-    bottom: 8px;
-    left: 27px;
+    bottom: 9px;
+    left: 15px;
     padding: 7px;
     color: #999;
     font-size: 22px;
@@ -152,8 +157,8 @@ form,
     text-shadow: 1px 1px 1px #000000;
     color: #999;
     text-decoration: none;
-    padding-left: 50px;
     padding: 4px 0;
+    padding-left: 60px;
     display: block;
 }
 
@@ -213,8 +218,8 @@ form,
 }
 
 #swap {
-    margin-left: -2px;
-    margin-right: 2px;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 #Hidden-label {
@@ -304,11 +309,22 @@ form,
 .links {
     display: flex;
     justify-content: flex-end;
+    margin: -.5rem;
 }
 
 .links .btn {
-    background: red;
     border-radius: 0;
     height: 54px;
-    line-height: 54px;
+    display: flex;
+    align-items: center;
+    color: #999;
+}
+
+.links .btn:hover, .links .btn.active {
+    background: rgba(0, 0, 0, .5);
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
 }

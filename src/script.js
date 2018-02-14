@@ -14,25 +14,25 @@ $(function () {
 
     if ($('#options-data').data('autohideon') == 'True') {
         autoHideOn = true;
-        $('#autoHide').addClass('selected-Option');
+        $('#autoHide').addClass('active');
     }
     else {
         autoHideOn = false;
-        $('#dontAutoHide').addClass('selected-Option');
+        $('#dontAutoHide').addClass('active');
     }
 
     if ($('#options-data').data('showborderon') == 'True')
-        $('#showBorders').addClass('selected-Option');
+        $('#showBorders').addClass('active');
     else {
         $('#lens').removeClass("lensEffect");
-        $('#hideBorders').addClass('selected-Option');
+        $('#hideBorders').addClass('active');
     }
     if ($('#options-data').data('squarecornerson') == 'True')
-        $('#squareCorners').addClass('selected-Option');
+        $('#squareCorners').addClass('active');
     else {
         $('#lens').css("border-radius", "50%");
         $("#lens").height($("#lens").width());
-        $('#roundCorners').addClass('selected-Option');
+        $('#roundCorners').addClass('active');
     }
 
     $(window).resize(function () {
@@ -277,15 +277,15 @@ $(function () {
     //options-----
     $('#dontAutoHide').click(function (e) {
         autoHideOn = false;
-        $('#autoHide').removeClass('selected-Option');
-        $('#dontAutoHide').addClass('selected-Option');
+        $('#autoHide').removeClass('active');
+        $('#dontAutoHide').addClass('active');
         updateOptions();
     });
 
     $('#autoHide').click(function (e) {
         autoHideOn = true;
-        $('#dontAutoHide').removeClass('selected-Option');
-        $('#autoHide').addClass('selected-Option');
+        $('#dontAutoHide').removeClass('active');
+        $('#autoHide').addClass('active');
         updateOptions();
     });
 
@@ -294,8 +294,8 @@ $(function () {
             $('#lens').css("border-radius", "1%");
             $("#lens").height($("#lens").width() * 9 / 16);
 
-            $('#roundCorners').removeClass('selected-Option');
-            $('#squareCorners').addClass('selected-Option');
+            $('#roundCorners').removeClass('active');
+            $('#squareCorners').addClass('active');
             updateOptions();
         }
     });
@@ -305,8 +305,8 @@ $(function () {
             $('#lens').css("border-radius", "50%");
             $("#lens").height($("#lens").width());
 
-            $('#squareCorners').removeClass('selected-Option');
-            $('#roundCorners').addClass('selected-Option');
+            $('#squareCorners').removeClass('active');
+            $('#roundCorners').addClass('active');
             updateOptions();
         }
     });
@@ -315,8 +315,8 @@ $(function () {
         if (!isFullScreen) {
             $('#lens').addClass("lensEffect");
 
-            $('#hideBorders').removeClass('selected-Option');
-            $('#showBorders').addClass('selected-Option');
+            $('#hideBorders').removeClass('active');
+            $('#showBorders').addClass('active');
             updateOptions();
         }
     });
@@ -325,16 +325,16 @@ $(function () {
         if (!isFullScreen) {
             $('#lens').removeClass("lensEffect");
 
-            $('#showBorders').removeClass('selected-Option');
-            $('#hideBorders').addClass('selected-Option');
+            $('#showBorders').removeClass('active');
+            $('#hideBorders').addClass('active');
             updateOptions();
         }
     });
 
     function updateOptions() {
-        autoHide = $('#autoHide').hasClass('selected-Option');
-        showBorders = $('#showBorders').hasClass('selected-Option');
-        squareCorners = $('#squareCorners').hasClass('selected-Option');
+        autoHide = $('#autoHide').hasClass('active');
+        showBorders = $('#showBorders').hasClass('active');
+        squareCorners = $('#squareCorners').hasClass('active');
         $.ajax({
             url: saveOptionsURL,
             data: { autoHide: autoHide, showBorders: showBorders, squareCorners: squareCorners },
@@ -354,7 +354,7 @@ $(function () {
             $("#Hidden-Frame").removeClass("non-interactive");
 
             $(this).html("<i class='fa fa-compress'>");
-            $("#fullScreen-container").addClass("active");
+            $("#fullScreen").addClass("active");
 
             $("#options-container").addClass("disabled");
             $("#options").addClass("disabled");
@@ -374,7 +374,7 @@ $(function () {
             $("#Hidden-Frame").addClass("non-interactive");
 
             $(this).html("<i class='fa fa-arrows-alt'>");
-            $("#fullScreen-container").removeClass("active");
+            $("#fullScreen").removeClass("active");
 
             $("#options-container").removeClass("disabled");
             $("#options").removeClass("disabled");

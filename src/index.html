@@ -22,24 +22,13 @@
         <!-- nav-bar -->
         <nav id="footer" class="bg-dark fixed-bottom">
             <div class="row">
-
-                <div class="col-2">
+                <div class="col-auto">
                     <a id="brand" href="https://example.com" target="_blank">
                         <span style="font-weight:400">PORT</span>HOLE<i class="fa fa-circle-o-notch"></i>
                     </a>
                 </div>
 
-                <div id="leftArrow" title="Minimize Toolbar">
-                    <i class="fa fa-chevron-circle-left"></i>
-                </div>
-                <div id="locked-noti" class="tabbed" title="The Porthole is Locked, click to unlock.">
-                    <i class="fa fa-lock"></i> LOCKED
-                </div>
-                <div id="hidden-noti" class="tabbed" title="The Porthole is Hidden, click to show.">
-                    <i class="fa fa-ban"></i> HIDDEN
-                </div>
-
-                <div class="col-7">
+                <div class="col">
                     <div class="row">
                         <div class="col">
                             <div class="input-group">
@@ -69,13 +58,13 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-auto">
                     <div class="links">
                         <div title="Feedback" class="btn"><a href="mailto:Matt.Morgan@onbase.com?Subject=Porthole Feedback"><i class="fa fa-reply-all"></i></a></div>
 
                         <div class="btn-group" title="Info">
                             <a id="info" href="#" style="cursor:help" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question"></i></a>
-                            <ul class="info-container dropdown-menu">
+                            <ul class="info-container dropdown-menu dropdown-menu-right">
                                 <li class="info-item">
                                     <div class="key">
                                         <div class="keycap"><br />Ctrl</div>
@@ -140,26 +129,36 @@
                         <div id="options-data" class="btn" style="display:none" data-autohideon="true" data-showborderon="true" data-squarecornerson="true"></div>
 
                         <div id="options-container" class="btn-group" title="Show options">
-                            <a id="options" href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Options <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a id="autoHide" href="#"><i class="fa fa-dot-circle-o"></i> Auto-Hide</a></li>
-                                <li><a id="dontAutoHide" href="#"><i class="fa fa-ban"></i> Don't Auto-Hide</a></li>
+                            <div id="options" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Options <span class="caret"></span></div>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" id="autoHide"><i class="fa fa-dot-circle-o"></i> Auto-Hide</a>
+                                <a class="dropdown-item" id="dontAutoHide"><i class="fa fa-ban"></i> Don't Auto-Hide</a>
 
-                                <li class="divider"></li>
+                                <div class="dropdown-divider"></div>
 
-                                <li><a id="showBorders" href="#"><i class="fa fa-eye"></i> Show Border</a></li>
-                                <li><a id="hideBorders" href="#"><i class="fa fa-eye-slash"></i> Hide Border</a></li>
+                                <a class="dropdown-item" id="showBorders"><i class="fa fa-eye"></i> Show Border</a>
+                                <a class="dropdown-item" id="hideBorders"><i class="fa fa-eye-slash"></i> Hide Border</a>
 
-                                <li class="divider"></li>
+                                <div class="dropdown-divider"></div>
 
-                                <li><a id="squareCorners" href="#"><i class="fa fa-square-o"></i> Square Corners</a></li>
-                                <li><a id="roundCorners" href="#"><i class="fa fa-circle-thin"></i> Round Corners</a></li>
-                            </ul>
+                                <a class="dropdown-item" id="squareCorners"><i class="fa fa-square-o"></i> Square Corners</a>
+                                <a class="dropdown-item" id="roundCorners"><i class="fa fa-circle-thin"></i> Round Corners</a>
+                            </div>
                         </div>
 
-                        <div id="fullScreen-container" class="btn" title="Fullscreen"><a id="fullScreen" href="#"><i class="fa fa-arrows-alt"></i></a></div>
+                        <div id="fullScreen" class="btn" title="Fullscreen"><i class="fa fa-arrows-alt"></i></div>
                     </div>
                 </div>
+            </div>
+
+            <div id="leftArrow" title="Minimize Toolbar">
+                <i class="fa fa-chevron-circle-left"></i>
+            </div>
+            <div id="locked-noti" class="tabbed" title="The Porthole is Locked, click to unlock.">
+                <i class="fa fa-lock"></i> LOCKED
+            </div>
+            <div id="hidden-noti" class="tabbed" title="The Porthole is Hidden, click to show.">
+                <i class="fa fa-ban"></i> HIDDEN
             </div>
         </nav>
 
